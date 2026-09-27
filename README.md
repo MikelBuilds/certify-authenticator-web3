@@ -1,4 +1,4 @@
-# CertiChain
+# Certify
 ### Blockchain-Based PDF Certificate Issuance and Verification System
 
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.20-363636?logo=solidity)](https://soliditylang.org/)
@@ -10,7 +10,7 @@
 [![React](https://img.shields.io/badge/React-18_Vite-61DAFB?logo=react)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-CertiChain is a full-stack web application that allows educational institutions to issue certificates that cannot be altered or faked.
+Certify is a full-stack web application that allows educational institutions to issue certificates that cannot be altered or faked.
 
 When an official certificate PDF is issued, the backend computes its unique SHA-256 digital fingerprint and saves that hash to a Solidity smart contract on the Ethereum blockchain (e.g. Sepolia testnet). Certificate metadata is indexed in MongoDB.
 
