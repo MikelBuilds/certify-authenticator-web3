@@ -63,15 +63,15 @@ const Navbar = () => {
   const isStudent = user?.role === "Student";
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0d141e]/90 backdrop-blur-md border-b border-[#3c4a42]/30 w-full transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-[#080D16]/90 backdrop-blur-md border-b border-[#1E293B]/30 w-full transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between h-16">
         {/* Brand Logo Anchor */}
         <Link
           to="/"
           onClick={(e) => handleNavClick(e, "hero-section")}
-          className="text-lg font-semibold tracking-tight text-[#dce3f1] flex items-center gap-2 active:scale-[0.98] transition-transform group"
+          className="text-lg font-semibold tracking-tight text-[#F1F5F9] flex items-center gap-2 active:scale-[0.98] transition-transform group"
         >
-          <span className="w-8 h-8 rounded-lg bg-[#232a35] border border-[#3c4a42]/50 flex items-center justify-center text-[#4edea3] group-hover:border-[#4edea3]/60 group-hover:shadow-[0_0_12px_rgba(16,185,129,0.3)] transition-all">
+          <span className="w-8 h-8 rounded-lg bg-[#111827] border border-[#1E293B]/50 flex items-center justify-center text-[#60A5FA] group-hover:border-[#60A5FA]/60 group-hover:shadow-[0_0_12px_rgba(16,185,129,0.3)] transition-all">
             <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">verified_user</span>
           </span>
           <span className="tracking-wide font-bold">CertiFy</span>
@@ -82,7 +82,7 @@ const Navbar = () => {
           <a
             href="#how-it-works"
             onClick={(e) => handleNavClick(e, "how-it-works")}
-            className="text-[#bbcabf] hover:text-[#4edea3] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#4edea3]"
+            className="text-[#94A3B8] hover:text-[#60A5FA] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#60A5FA]"
           >
             How It Works
           </a>
@@ -90,7 +90,7 @@ const Navbar = () => {
           <a
             href="#verify"
             onClick={(e) => handleNavClick(e, "verify")}
-            className="text-[#bbcabf] hover:text-[#4edea3] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#4edea3]"
+            className="text-[#94A3B8] hover:text-[#60A5FA] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#60A5FA]"
           >
             Verify
           </a>
@@ -98,7 +98,7 @@ const Navbar = () => {
           <a
             href="#student-locker"
             onClick={handleStudentLockerClick}
-            className="text-[#bbcabf] hover:text-[#4edea3] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#4edea3]"
+            className="text-[#94A3B8] hover:text-[#60A5FA] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#60A5FA]"
           >
             Student Locker
           </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
           <a
             href="#why-blockchain"
             onClick={(e) => handleNavClick(e, "why-blockchain")}
-            className="text-[#bbcabf] hover:text-[#4edea3] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#4edea3]"
+            className="text-[#94A3B8] hover:text-[#60A5FA] transition-colors duration-150 py-1 hover:border-b-2 hover:border-[#60A5FA]"
           >
             Why Blockchain
           </a>
@@ -119,8 +119,8 @@ const Navbar = () => {
             onClick={connectMetaMask}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold border transition-all ${
               walletAddress
-                ? "bg-[#10b981]/10 text-[#4edea3] border-[#4edea3]/40"
-                : "bg-[#232a35] text-[#bbcabf] hover:border-[#4edea3]/60 hover:text-[#4edea3] border-[#3c4a42]/60"
+                ? "bg-[#3B82F6]/10 text-[#60A5FA] border-[#60A5FA]/40"
+                : "bg-[#111827] text-[#94A3B8] hover:border-[#60A5FA]/60 hover:text-[#60A5FA] border-[#1E293B]/60"
             }`}
           >
             <span className="material-symbols-outlined text-[16px]">wallet</span>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-2">
                   <Link
                     to="/dashboard"
-                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#19202a] text-[#dce3f1] border border-[#3c4a42]/60 hover:border-[#4edea3]/60 hover:text-[#4edea3] text-xs font-medium transition-all"
+                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#111827] text-[#F1F5F9] border border-[#1E293B]/60 hover:border-[#60A5FA]/60 hover:text-[#60A5FA] text-xs font-medium transition-all"
                   >
                     <span className="material-symbols-outlined text-[16px]">dashboard</span>
                     <span className="hidden lg:inline">Dashboard</span>
@@ -142,7 +142,7 @@ const Navbar = () => {
 
                   <Link
                     to="/issue"
-                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#10b981] text-[#00422b] hover:bg-[#45dfa4] text-xs font-semibold transition-all shadow-sm active:scale-95"
+                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#3B82F6] text-[#FFFFFF] hover:bg-[#60A5FA] text-xs font-semibold transition-all shadow-sm active:scale-95"
                   >
                     <span className="material-symbols-outlined text-[16px]">add_circle</span>
                     <span>Issue Certificate</span>
@@ -154,16 +154,16 @@ const Navbar = () => {
               {isStudent && (
                 <Link
                   to="/certificates"
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#10b981]/20 text-[#4edea3] border border-[#4edea3]/40 text-xs font-semibold transition-all"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#3B82F6]/20 text-[#60A5FA] border border-[#60A5FA]/40 text-xs font-semibold transition-all"
                 >
                   <span className="material-symbols-outlined text-[16px]">lock</span>
                   <span>My Locker</span>
                 </Link>
               )}
 
-              <div className="hidden sm:flex flex-col text-right border-l border-[#3c4a42]/40 pl-3">
-                <span className="text-xs font-semibold text-[#dce3f1]">{user?.name}</span>
-                <span className="text-[10px] text-[#4edea3] font-mono font-medium">{user?.role}</span>
+              <div className="hidden sm:flex flex-col text-right border-l border-[#1E293B]/40 pl-3">
+                <span className="text-xs font-semibold text-[#F1F5F9]">{user?.name}</span>
+                <span className="text-[10px] text-[#60A5FA] font-mono font-medium">{user?.role}</span>
               </div>
 
               <button
@@ -178,7 +178,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="px-4 py-2 text-xs font-semibold bg-[#232a35] text-[#dce3f1] border border-[#3c4a42]/60 rounded-lg hover:border-[#4edea3]/60 hover:text-[#4edea3] hover:shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all duration-200 flex items-center gap-1.5 active:scale-95 btn-shine"
+              className="px-4 py-2 text-xs font-semibold bg-[#111827] text-[#F1F5F9] border border-[#1E293B]/60 rounded-lg hover:border-[#60A5FA]/60 hover:text-[#60A5FA] hover:shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all duration-200 flex items-center gap-1.5 active:scale-95 btn-shine"
             >
               <span className="material-symbols-outlined text-[18px]">key</span>
               <span>Admin Login</span>

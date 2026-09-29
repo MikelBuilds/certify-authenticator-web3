@@ -38,7 +38,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0d141e] text-[#dce3f1] flex items-center justify-center px-4 pt-20 pb-12 crypto-grid">
+    <div className="min-h-screen bg-[#080D16] text-[#F1F5F9] flex items-center justify-center px-4 pt-20 pb-12 crypto-grid">
       <div className="w-full max-w-md bg-surface-container-low p-8 rounded-2xl border border-outline-variant/40 shadow-2xl">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-high border border-outline-variant/50 text-primary mb-3 shadow-[0_0_15px_rgba(16,185,129,0.2)]">

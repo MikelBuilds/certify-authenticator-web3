@@ -57,86 +57,86 @@ const IssueCertificate = () => {
   };
 
   return (
-    <div className="flex bg-[#0d141e] text-[#dce3f1] font-['Inter',sans-serif]">
+    <div className="flex bg-[#080D16] text-[#F1F5F9] font-['Inter',sans-serif]">
       <Sidebar />
       <main className="flex-1 p-6 md:p-8 max-w-4xl mx-auto space-y-8">
-        <div className="border-b border-[#3c4a42]/30 pb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#19202a] border border-[#3c4a42]/40 mb-2">
-            <span className="material-symbols-outlined text-[16px] text-[#4edea3]">add_circle</span>
-            <span className="font-mono text-xs text-[#4edea3]">ADMIN CREDENTIAL ISSUANCE</span>
+        <div className="border-b border-[#1E293B]/30 pb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#111827] border border-[#1E293B]/40 mb-2">
+            <span className="material-symbols-outlined text-[16px] text-[#60A5FA]">add_circle</span>
+            <span className="font-mono text-xs text-[#60A5FA]">ADMIN CREDENTIAL ISSUANCE</span>
           </div>
-          <h1 className="text-3xl font-bold text-[#dce3f1]">Issue New Certificate</h1>
-          <p className="text-xs text-[#bbcabf] mt-1">
+          <h1 className="text-3xl font-bold text-[#F1F5F9]">Issue New Certificate</h1>
+          <p className="text-xs text-[#94A3B8] mt-1">
             Confer academic degree and anchor the unique SHA-256 PDF hash directly to Ethereum smart contract registry.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-[#151c26] p-8 rounded-xl border border-[#3c4a42]/40 space-y-6 shadow-xl">
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-[#111827] p-8 rounded-xl border border-[#1E293B]/40 space-y-6 shadow-xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">Student Full Name</label>
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Student Full Name</label>
               <input
                 type="text"
                 placeholder="Elena Rostova"
                 {...register("studentName", { required: "Student name is required" })}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none"
               />
               {errors.studentName && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.studentName.message}</span>}
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">Student Email (For Locker Access)</label>
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Student Email (For Locker Access)</label>
               <input
                 type="email"
                 placeholder="elena.rostova@stanford.edu"
                 {...register("studentEmail", { required: "Student email is required" })}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none font-mono"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none font-mono"
               />
               {errors.studentEmail && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.studentEmail.message}</span>}
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">Degree / Course Name</label>
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Degree / Course Name</label>
               <input
                 type="text"
                 placeholder="Bachelor of Science in Mathematics"
                 {...register("course", { required: "Course is required" })}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none"
               />
               {errors.course && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.course.message}</span>}
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">Issuing Institution</label>
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Issuing Institution</label>
               <input
                 type="text"
                 placeholder="Stanford Institute of Technology"
                 {...register("institution", { required: "Institution name is required" })}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none"
               />
               {errors.institution && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.institution.message}</span>}
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">
                 Certificate ID{" "}
-                <span className="text-[#bbcabf] font-normal">(optional — auto-generated if left blank)</span>
+                <span className="text-[#94A3B8] font-normal">(optional — auto-generated if left blank)</span>
               </label>
               <input
                 type="text"
                 placeholder="e.g. CERT-2026-CS001 (leave blank to auto-generate)"
                 {...register("certificateId")}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none font-mono"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none font-mono"
               />
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-xs font-semibold text-[#dce3f1] mb-1">Issue Date</label>
+              <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Issue Date</label>
               <input
                 type="date"
                 defaultValue={new Date().toISOString().split("T")[0]}
                 {...register("issueDate", { required: "Issue date is required" })}
-                className="w-full px-4 py-2.5 rounded-lg bg-[#0d141e] border border-[#3c4a42]/60 text-[#dce3f1] text-sm focus:border-[#4edea3] focus:outline-none font-mono"
+                className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none font-mono"
               />
               {errors.issueDate && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.issueDate.message}</span>}
             </div>
@@ -144,8 +144,8 @@ const IssueCertificate = () => {
 
           {/* PDF File Attachment */}
           <div>
-            <label className="block text-xs font-semibold text-[#dce3f1] mb-2">Original Conferred PDF Certificate</label>
-            <div className="border-2 border-dashed border-[#3c4a42]/60 rounded-xl p-6 text-center bg-[#0d141e]/50 cursor-pointer">
+            <label className="block text-xs font-semibold text-[#F1F5F9] mb-2">Original Conferred PDF Certificate</label>
+            <div className="border-2 border-dashed border-[#1E293B]/60 rounded-xl p-6 text-center bg-[#080D16]/50 cursor-pointer">
               <input
                 type="file"
                 accept="application/pdf"
@@ -154,11 +154,11 @@ const IssueCertificate = () => {
                 id="issuePdfInput"
               />
               <label htmlFor="issuePdfInput" className="cursor-pointer space-y-2 block">
-                <span className="material-symbols-outlined text-3xl text-[#4edea3]">picture_as_pdf</span>
-                <p className="text-xs font-medium text-[#dce3f1]">
+                <span className="material-symbols-outlined text-3xl text-[#60A5FA]">picture_as_pdf</span>
+                <p className="text-xs font-medium text-[#F1F5F9]">
                   {pdfFile ? pdfFile.name : "Click to select or drop original certificate PDF"}
                 </p>
-                <p className="text-[11px] text-[#bbcabf] font-mono">
+                <p className="text-[11px] text-[#94A3B8] font-mono">
                   SHA-256 hash will be generated & anchored to Ethereum contract
                 </p>
               </label>
@@ -168,7 +168,7 @@ const IssueCertificate = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 rounded-lg bg-[#10b981] hover:bg-[#45dfa4] text-[#00422b] font-semibold text-sm flex items-center justify-center gap-2 shadow-lg transition-all disabled:opacity-50 btn-shine cursor-pointer"
+            className="w-full py-3.5 rounded-lg bg-[#3B82F6] hover:bg-[#60A5FA] text-[#FFFFFF] font-semibold text-sm flex items-center justify-center gap-2 shadow-lg transition-all disabled:opacity-50 btn-shine cursor-pointer"
           >
             <span className="material-symbols-outlined text-[20px]">
               {loading ? "hourglass_empty" : "verified"}

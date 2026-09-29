@@ -21,7 +21,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="min-h-screen bg-[#0d141e] text-[#dce3f1] flex flex-col font-['Inter',sans-serif]">
+        <div className="min-h-screen bg-[#080D16] text-[#E5E7EB] flex flex-col font-['Inter',sans-serif]">
           <Navbar />
           <div className="flex-1">
             <Routes>
