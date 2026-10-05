@@ -12,6 +12,10 @@ export default function VerifyCertificate() {
 
   const processFile = async (selected) => {
     if (!selected) return;
+    if (selected.size > 4 * 1024 * 1024) {
+      toast.error("PDF file size exceeds maximum limit of 4 MB");
+      return;
+    }
     if (selected.type !== "application/pdf") {
       toast.error("Please upload an official PDF certificate");
       return;
@@ -121,7 +125,7 @@ export default function VerifyCertificate() {
                 <p className="text-xs text-[#94A3B8]/70 mt-1">
                   {file
                     ? `${(file.size / 1024 / 1024).toFixed(2)} MB — Ready to verify`
-                    : "PDF format only, up to 10 MB"}
+                    : "PDF format only, up to 4 MB"}
                 </p>
                 <input
                   ref={inputRef}

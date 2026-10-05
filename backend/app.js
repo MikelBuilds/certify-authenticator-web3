@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const certificateRoutes = require("./routes/certificateRoutes");
 
 const app = express();
+if (process.env.VERCEL) app.set("trust proxy", 1);
 
 // Security HTTP Headers
 app.use(helmet());

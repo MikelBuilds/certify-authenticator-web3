@@ -31,6 +31,10 @@ const Landing = () => {
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
+      if (file.size > 4 * 1024 * 1024) {
+        toast.error("PDF file size exceeds maximum limit of 4 MB");
+        return;
+      }
       if (file.type === "application/pdf") {
         setSelectedFile(file);
         setVerificationResult(null);
@@ -45,6 +49,10 @@ const Landing = () => {
     setIsDragOver(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
+      if (file.size > 4 * 1024 * 1024) {
+        toast.error("PDF file size exceeds maximum limit of 4 MB");
+        return;
+      }
       if (file.type === "application/pdf") {
         setSelectedFile(file);
         setVerificationResult(null);
@@ -454,7 +462,7 @@ const Landing = () => {
                 </div>
                 <div className="mt-3 inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#111827] border border-[#1E293B]/50 text-[#94A3B8] font-mono text-xs">
                   <span className="w-2 h-2 rounded-full bg-[#60A5FA] animate-pulse"></span>
-                  <span>PDF • Maximum 10 MB</span>
+                  <span>PDF • Maximum 4 MB</span>
                 </div>
                 <input
                   id="landingPdfInput"

@@ -12,9 +12,9 @@ const validatePdfUpload = (req, res, next) => {
     return res.status(400).json({ success: false, message: "Invalid PDF file signature. File is corrupted or not a valid PDF" });
   }
 
-  // Enforce 10MB size limit
-  if (req.file.size > 10 * 1024 * 1024) {
-    return res.status(400).json({ success: false, message: "PDF file size exceeds maximum limit of 10 MB" });
+  // Leave space for multipart form fields within Vercel's request limit.
+  if (req.file.size > 4 * 1024 * 1024) {
+    return res.status(400).json({ success: false, message: "PDF file size exceeds maximum limit of 4 MB" });
   }
 
   next();

@@ -8,6 +8,11 @@ const errorHandler = (err, req, res, next) => {
   let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   let message = err.message || "Internal Server Error";
 
+  if (err.code === "LIMIT_FILE_SIZE") {
+    statusCode = 413;
+    message = "PDF file size exceeds maximum limit of 4 MB";
+  }
+
   // Mongoose CastError (Bad ObjectId)
   if (err.name === "CastError" && err.kind === "ObjectId") {
     statusCode = 404;

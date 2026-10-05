@@ -14,6 +14,10 @@ const IssueCertificate = () => {
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
+      if (file.size > 4 * 1024 * 1024) {
+        toast.error("PDF file size exceeds maximum limit of 4 MB");
+        return;
+      }
       if (file.type === "application/pdf") {
         setPdfFile(file);
       } else {

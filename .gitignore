@@ -18,3 +18,9 @@ frontend/.env
 Thumbs.db
 .vscode/
 .idea/
+
+# Vercel local project settings
+.vercel/
+
+.env*
+!.env.example

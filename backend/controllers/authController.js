@@ -10,6 +10,16 @@ const registerUser = async (req, res, next) => {
   try {
     const { name, email, password, role, institution } = req.body;
 
+    // A public deployment must not grant access to the issuer wallet to any visitor.
+    if (role === "Admin" && (process.env.VERCEL || process.env.NODE_ENV === "production" || process.env.ADMIN_REGISTRATION_CODE)) {
+      if (!process.env.ADMIN_REGISTRATION_CODE || req.body.adminRegistrationCode !== process.env.ADMIN_REGISTRATION_CODE) {
+        return res.status(403).json({
+          success: false,
+          message: "A valid admin invitation code is required to register an institution.",
+        });
+      }
+    }
+
     const userExists = await User.findOne({ email });
     if (userExists) {
       return res.status(400).json({

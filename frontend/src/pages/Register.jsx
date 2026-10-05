@@ -79,6 +79,17 @@ const Register = () => {
             {errors.password && <span className="text-xs text-[#ffb4ab] mt-1 block">{errors.password.message}</span>}
           </div>
 
+          <div>
+            <label className="block text-xs font-semibold text-[#F1F5F9] mb-1">Admin Invitation Code</label>
+            <input
+              type="password"
+              autoComplete="off"
+              placeholder="Code provided by the project owner"
+              {...register("adminRegistrationCode")}
+              className="w-full px-4 py-2.5 rounded-lg bg-[#080D16] border border-[#1E293B]/60 text-[#F1F5F9] text-sm focus:border-[#60A5FA] focus:outline-none"
+            />
+          </div>
+
           <button
             type="submit"
             disabled={loading}
