@@ -1,6 +1,5 @@
 # Certify
 ### Blockchain-Based PDF Certificate Issuance and Verification System
-[![Live Demo](https://img.shields.io/badge/Live-Demo-success?logo=vercel)](https://certify-authenticator-web3.vercel.app/)
 
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.20-363636?logo=solidity)](https://soliditylang.org/)
 [![Ethereum](https://img.shields.io/badge/Ethereum-Sepolia_Testnet-3C3C3D?logo=ethereum)](https://ethereum.org/)
